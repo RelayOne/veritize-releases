@@ -12,8 +12,10 @@ The canonical source for Veritize lives at <https://github.com/RelayOne/veritize
 PLATFORM=darwin-arm64   # or: darwin-amd64, linux-amd64, linux-arm64
 curl -L "https://github.com/RelayOne/veritize-releases/releases/latest/download/veritize-local-${PLATFORM}-v0.1.2.tar.gz" \
   | tar -xz
-chmod +x veritize-local
-./veritize-local --help
+chmod +x "veritize-local-${PLATFORM}"
+"./veritize-local-${PLATFORM}" --help
+# (optional) rename for convenience:
+# mv "veritize-local-${PLATFORM}" veritize-local
 ```
 
 ### Windows (PowerShell)
